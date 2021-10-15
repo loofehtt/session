@@ -22,7 +22,7 @@ if (mysqli_num_rows($result) > 0) {
         $_SESSION['signupOK'] = $user_email;
         header('location:../mail/index.php?email=' . $user_email . '&name=' . $user_name . '&pass=' . $user_pass);
     } else {
-        echo "lỗi sql<br>";
+        echo "lỗi sql";
     }
     mysqli_close($conn);
 }
