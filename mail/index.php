@@ -28,12 +28,12 @@ try {
     $mail->SMTPAuth = 'true'; //* enable smtp authentication
     $mail->SMTPSecure = 'tls'; //* set type of encryption (ssl, tls)
     $mail->Port = '587'; //* set post to connect smtp
-    $mail->Username = 'phu83001@gmail.com'; //* set gmail username
+    $mail->Username = 'phuxxx@gmail.com'; //* set gmail username
     $mail->Password = 'qhkqridacikbinti'; //* set gmail pass
     $mail->CharSet = 'UTF-8'; //* set vietnamese
     //Recipients
     //* set sender email
-    $mail->setFrom('phu83001@gmail.com', 'Nguyễn Văn Phú');
+    $mail->setFrom('phuxxx@gmail.com', 'Nguyễn Văn Phú');
     //* add recipient
     $mail->addAddress("$user_email"); //! variable must in ""
     //* Set email format to HTML
