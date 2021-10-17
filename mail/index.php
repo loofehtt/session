@@ -26,8 +26,8 @@ function sendemail($email, $name, $pass, $code)
         $mail->SMTPAuth = 'true'; //* enable smtp authentication
         $mail->SMTPSecure = 'tls'; //* set type of encryption (ssl, tls)
         $mail->Port = '587'; //* set post to connect smtp
-        $mail->Username = ''; //* set gmail username
-        $mail->Password = ''; //* set gmail pass
+        $mail->Username = 'phu83001@gmail.com'; //* set gmail username
+        $mail->Password = 'shkrzpzyphfvjczz'; //* set gmail pass
         $mail->CharSet = 'UTF-8'; //* set vietnamese
         //Recipients
         //* set sender email
@@ -41,6 +41,7 @@ function sendemail($email, $name, $pass, $code)
         //* mail body
         $bodyContent = '<p>Thân gửi: ' . $name . '</p>';
         $bodyContent .= '<p>Chúc mừng bạn đã đăng ký thành công</p>';
+        //! có thể phải sửa đường dẫn bên dưới
         $bodyContent .= 'Nhấp vào đây để kích hoạt: <a href="http://localhost/test/session/activation.php?email=' . $email . '&code=' . $code . '">Nhấp vào đây</a>';
         $bodyContent .= '<p>mật khẩu của bạn là ' . $pass . '</p>';
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 15, 2021 lúc 07:25 AM
+-- Thời gian đã tạo: Th10 17, 2021 lúc 01:36 PM
 -- Phiên bản máy phục vụ: 10.4.20-MariaDB
 -- Phiên bản PHP: 8.0.9
 
@@ -85,21 +85,22 @@ CREATE TABLE `db_users` (
   `user_id` int(10) UNSIGNED NOT NULL,
   `user_name` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_email` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `user_pass` varchar(30) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_pass` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_regis_date` datetime DEFAULT current_timestamp(),
   `user_status` tinyint(1) DEFAULT 0,
-  `user_level` tinyint(1) DEFAULT 0
+  `user_level` tinyint(1) DEFAULT 0,
+  `user_code` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `db_users`
 --
 
-INSERT INTO `db_users` (`user_id`, `user_name`, `user_email`, `user_pass`, `user_regis_date`, `user_status`, `user_level`) VALUES
-(1, 'admin', 'dungkt@tlu.edu.vn', 'abcabc', '2021-10-01 08:16:43', 1, 1),
-(2, 'loofeht', 'phu832001@gmail.com', '123', '0000-00-00 00:00:00', 1, 1),
-(30, 'Thầy Dũng', 'kitudu99@gmail.com', 'ad', '2021-10-15 10:06:02', 0, 0),
-(37, 'phu8301', 'phu83001@gmail.com', 'admin', '2021-10-15 12:04:28', 0, 0);
+INSERT INTO `db_users` (`user_id`, `user_name`, `user_email`, `user_pass`, `user_regis_date`, `user_status`, `user_level`, `user_code`) VALUES
+(1, 'admin', 'dungkt@tlu.edu.vn', 'abcabc', '2021-10-01 08:16:43', 1, 1, ''),
+(2, 'loofeht', 'phu832001@gmail.com', '123', '0000-00-00 00:00:00', 1, 1, ''),
+(30, 'Thầy Dũng', 'kitudu99@gmail.com', 'ad', '2021-10-15 10:06:02', 0, 0, ''),
+(46, 'phu8301', 'phu83001@gmail.com', '$2y$10$dEixtoDe5Ywv6s7fCBEvSu4cPXHGH9/ExIDrEl45l6ocB.E12eZgS', '2021-10-17 17:05:52', 1, 0, 'ba39a7e0ad192b530d4f813077f14d27');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -147,7 +148,7 @@ ALTER TABLE `db_offices`
 -- AUTO_INCREMENT cho bảng `db_users`
 --
 ALTER TABLE `db_users`
-  MODIFY `user_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `user_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
