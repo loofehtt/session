@@ -27,7 +27,7 @@ function sendemail($email, $name, $pass, $code)
         $mail->SMTPSecure = 'tls'; //* set type of encryption (ssl, tls)
         $mail->Port = '587'; //* set post to connect smtp
         $mail->Username = '@gmail.com'; //* set gmail username
-        $mail->Password = 'abcd'; //* set gmail pass
+        $mail->Password = 'adsc'; //* set gmail pass
         $mail->CharSet = 'UTF-8'; //* set vietnamese
         //Recipients
         //* set sender email

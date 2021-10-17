@@ -16,9 +16,14 @@ if (isset($_POST['login'])) {
     if (mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
         $pass_hash = $row['user_pass'];
+        $status = $row['user_status'];
         if (password_verify($user_pass, $pass_hash)) {
-            $_SESSION['loginOK'] = $user_name;
-            header("location: ./index.php");
+            if ($status == '0') {
+                echo "tài khoản chưa được kích hoạt";
+            } else {
+                $_SESSION['loginOK'] = $user_name;
+                header("location: ./index.php");
+            }
         }
     } else {
         header("location: ../index.php");
