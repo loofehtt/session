@@ -42,7 +42,7 @@ function sendemail($email, $name, $pass, $code)
         $bodyContent = '<p>Thân gửi: ' . $name . '</p>';
         $bodyContent .= '<p>Chúc mừng bạn đã đăng ký thành công</p>';
         //! có thể phải sửa đường dẫn bên dưới
-        $bodyContent .= 'Nhấp vào đây để kích hoạt: <a href="http://localhost/test/session/activation.php?email=' . $email . '&code=' . $code . '">Nhấp vào đây</a>';
+        $bodyContent .= 'Nhấp vào đây để kích hoạt: <a href="http://localhost/test/session/admin/activation.php?email=' . $email . '&code=' . $code . '">Nhấp vào đây</a>';
         $bodyContent .= '<p>mật khẩu của bạn là ' . $pass . '</p>';
 
         $mail->Body = $bodyContent;
