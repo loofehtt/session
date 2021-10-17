@@ -24,8 +24,12 @@ if (isset($_POST['login'])) {
                 $_SESSION['loginOK'] = $user_name;
                 header("location: ./index.php");
             }
+        } else {
+            echo "Mật khẩu không chính xác<br><br>";
+            echo '<a href="../index.php">Quay lại trang đăng nhập</a>';
         }
     } else {
-        header("location: ../index.php");
+        echo "tài khoản không tồn tại<br><br>";
+        echo '<a href="../index.php">Quay lại trang đăng nhập</a>';
     }
 }
