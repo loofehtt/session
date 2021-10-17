@@ -3,8 +3,8 @@ include './header.php';
 ?>
 <form action="./admin/login.php" method="POST">
     <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input type="email" class="form-control" name="userEmail">
+        <label for="exampleInputEmail1" class="form-label">ID</label>
+        <input type="text" class="form-control" name="userName">
         <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
     </div>
     <div class="mb-3">
